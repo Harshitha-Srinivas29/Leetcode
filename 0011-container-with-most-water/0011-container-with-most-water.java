@@ -4,13 +4,11 @@ class Solution {
        int maxWater = Integer.MIN_VALUE;
 
        while(left < right){
-        // int curr = (right - left) * Math.min(height[left], height[right]);
-        // maxWater = Math.max(curr, maxWater);
         if(height[left] < height[right])
         {   
             maxWater = Math.max(maxWater, (right-left) * height[left]);
             left++;
-        } else if (height[left] >= height[right]){
+        } else{
             maxWater = Math.max(maxWater, (right-left) * height[right]);
             right--;
         }
