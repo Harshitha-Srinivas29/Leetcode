@@ -1,7 +1,5 @@
 class Solution:
     def maxFreqSum(self, s: str) -> int:
-        max_count1 = -1
-        max_count2 = -1
         map1 = {}
         map2 = {}
         for c in s:
