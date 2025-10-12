@@ -45,7 +45,8 @@ class MyCircularQueue:
 
     def isEmpty(self) -> bool:
         if self.count == 0:
-            return False       
+            return True
+        return False
 
     def isFull(self) -> bool:
         if self.count == self.capacity:
