@@ -13,14 +13,14 @@ class Solution:
                 self.insertIntoBST(root.right, val)
             else: 
                 root.right = TreeNode(val)
-                # return root
+                return root
 
         elif val < root.val:
             if root.left:
                 self.insertIntoBST(root.left, val)
             else: 
                 root.left = TreeNode(val)
-                # return root
+                return root
                 
         return root
         
