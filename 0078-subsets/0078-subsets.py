@@ -1,9 +1,11 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        def backtrack(start, path):
-            result.append(path)
-            for i in range(start, len(nums)):
-                backtrack(i+1, path + [nums[i]])      
-        result = []
-        backtrack(0, [])
-        return result
+        res = []
+        def dfs(i, path):
+            res.append(path[:])
+            for j in range(i, len(nums)):
+                path.append(nums[j])
+                dfs(j + 1, path)
+                path.pop()
+        dfs(0, [])
+        return res
