@@ -10,6 +10,7 @@ class Solution:
                 path.append(i)
                 dfs(i+1, path)
                 path.pop()
+            return
         dfs(1, [])
         return result
         
