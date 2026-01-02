@@ -8,21 +8,21 @@ class Solution:
             for j in range(len(board[0])):
                 num = board[i][j]
 
-                if num == ".":
+                if num == '.':
                     continue
+                
                 if num in row[i]:
                     return False
                 row[i].add(num)
-                
+
                 if num in col[j]:
                     return False
                 col[j].add(num)
 
-                index = (i//3) * 3 + (j // 3)
-
+                index = (i//3) * 3 + (j//3)
                 if num in box[index]:
                     return False
                 box[index].add(num)
 
         return True
-            
+        
